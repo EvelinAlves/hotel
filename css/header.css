@@ -1,0 +1,88 @@
+.menu {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 11px;
+    max-width: 1100px;
+}
+
+.social-menu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.social-icon {
+    display: inline-block;
+    padding: 5px;
+}
+
+.icon {
+    width: 90%;
+    box-shadow: 5px -1px 10px rgba(97, 96, 96, 0.3);
+}
+
+.main-manu-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    align-content: center;
+    justify-content: space-between;
+    box-shadow: 5px -1px 10px rgba(97, 96, 96, 0.3);
+    width: 100%;
+}
+
+.logo-main-menu {
+    width: 200px;
+}
+
+.item-main-menu, .logo-main-menu {
+    display: inline-block;
+}
+
+.main-menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.item-main-menu a {
+    display: block;
+    text-transform: uppercase;
+    padding: 10px;
+    color: #717171;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+}
+
+.item-main-menu a:hover {
+    background-color: rgba(153, 61, 110, .5);
+}
+
+.banner {
+    background-size: cover;
+    background-position: center top;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100vw;
+    background-image: url("../img/banner_one.jpg");
+    animation: slide 20s linear 2s infinite alternate;
+    /* animation-fill-mode: both; */
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slide {
+    0%, 30% {
+        background-image: url("../img/banner_one.jpg");
+    }
+    35%, 65% {
+        background-image: url("../img/banner_two.jpg");
+    }
+    70%, 100% {
+        background-image: url("../img/banner_three.jpg");
+    }
+}
+
+/*https://www.youtube.com/watch?v=eTELLTacg-8*/
