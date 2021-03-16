@@ -1,11 +1,9 @@
+@charset "UTF-8";
+/* sass css/_home.scss css/home..css */
 body {
-  /* 599 */
-  /* 600 */
+  /*CONFIGURAÇÕES GLOBAIS */
 }
-@media (max-width: 37.4375em) {
-  body {
-    /* 599 ok*/
-  }
+@media (max-width: 575px) {
   body .main-container {
     display: grid;
     grid-template-columns: 35vw 65vw;
@@ -56,6 +54,9 @@ body {
     display: block;
     margin-bottom: 10px;
   }
+  body .main-menu-icons {
+    display: none;
+  }
   body img#logo {
     width: 100%;
   }
@@ -73,10 +74,109 @@ body {
     color: #717171;
   }
 }
-@media (min-width: 37.5em) {
+@media (min-width: 576px) {
   body {
-    /* 600 ok */
+    /*.social-icon {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    .social-icon a{
+        display: block;
+        height: 32px;
+        transition: background box-shadow  .1s;
+    }
+
+    .social-icon a:hover {
+        background-color: rgba(153, 61, 110, .5);
+        box-shadow: 5px -1px 10px rgba(153, 61, 110, 0.3);
+    }
+
+    .icon {
+        box-shadow: 5px -1px 10px rgba(97, 96, 96, 0.3);
+    }*/
   }
+  body .main-container {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 23vh 67vh 10vh;
+    grid-template-areas: "header" "main" "footer";
+  }
+  body header {
+    grid-area: header;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: darksalmon;
+  }
+  body main {
+    background-color: gray;
+    grid-area: main;
+  }
+  body footer {
+    background-color: cornflowerblue;
+    grid-area: footer;
+  }
+  body .menu {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+  }
+  body .social-menu {
+    display: none;
+  }
+  body .main-manu-container {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+  }
+  body .logo-main-menu {
+    display: inline-block;
+    margin: auto;
+  }
+  body a.logo-main-menu {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  body .main-menu {
+    display: none;
+  }
+  body .main-menu-icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-right: 5px;
+    margin: 0 auto;
+  }
+  body .item-main-menu-icons {
+    display: inline-block;
+    margin: 10px;
+  }
+  body .item-main-menu-icons a {
+    padding: 1px 5px 0px 5px;
+    font-size: 26px;
+    color: #918f8f;
+  }
+  body .item-main-menu-icons span {
+    vertical-align: initial;
+  }
+  body .banner {
+    background-size: cover;
+    background-position: center top;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    width: 100vw;
+    background-size: 80%;
+    background-image: url("../img/banner_one.jpg");
+    animation: slide 10s linear 2s infinite alternate;
+    animation-timing-function: ease-in-out;
+  }
+}
+@media (min-width: 768px) {
   body .main-container {
     display: grid;
     grid-template-columns: 100vw;
@@ -104,6 +204,17 @@ body {
     flex-wrap: wrap;
     padding-top: 40px;
     max-width: 1100px;
+  }
+  body .banner {
+    background-size: cover;
+    background-position: center top;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    width: 100vw;
+    background-size: 80%;
+    background-image: url("../img/banner_one.jpg");
+    animation: slide 10s linear 2s infinite alternate;
+    animation-timing-function: ease-in-out;
   }
   body .social-menu {
     display: flex;
@@ -142,10 +253,14 @@ body {
   body .item-main-menu, body .logo-main-menu {
     display: inline-block;
   }
+  body .main-menu-icons {
+    display: none;
+  }
   body .main-menu {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    padding-right: 5px;
   }
   body .item-main-menu a {
     display: block;
@@ -161,7 +276,15 @@ body .item-main-menu a:hover {
   background-color: rgba(153, 61, 110, 0.7);
   color: white;
 }
-body .active, body a.active:hover {
+body .item-main-menu .active, body .item-main-menu .active:hover {
+  background-color: #993d6e !important;
+  color: white !important;
+}
+body .item-main-menu-icons a:hover {
+  background-color: rgba(153, 61, 110, 0.7);
+  color: white !important;
+}
+body .item-main-menu-icons .active, body .item-main-menu-icons .active:hover {
   background-color: #993d6e !important;
   color: white !important;
 }
