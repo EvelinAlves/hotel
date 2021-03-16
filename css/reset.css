@@ -4,20 +4,16 @@ html, body, div, ul, li, a{
     border: 0;
     font-size: 100%;
     list-style: none;
+    font-family: 'Open Sans';
+    font-weight: bolder;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
 }
 
 a {
     text-decoration: none;
 }
-
-
-
-
-
-
-
-
-
 
 
 
