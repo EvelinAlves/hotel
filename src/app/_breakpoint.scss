@@ -1,0 +1,25 @@
+@mixin breakpoint($point) {
+    @if $point == small-only{
+        @media (max-width: 575px) { @content; } // <576px (xs)
+    }
+    @else if $point == small-up{
+        @media (min-width: 576px ) { @content; } // ≥576px (sm)
+    }
+    @else if $point == medium-only{
+        @media (min-width: 768px) { @content; } // ≥768 px (md)
+    }
+    @else if $point == medium-up{
+        @media (min-width: 992px) { @content; } // ≥992 px (lg)
+    }
+    @else if $point == large-only{
+        @media (min-width: 1200px) { @content; } // ≥1200px (xl)
+    }
+    @else if $point == medium-up{
+        @media (min-width: 1400px) { @content; } // ≥1400px (xxl)
+    }
+    @else {
+        @media (min-width: ($point / 16) + 'em') {
+          @content;
+        }
+    }
+}
